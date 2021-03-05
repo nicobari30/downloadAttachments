@@ -18,6 +18,8 @@ with MailBox(imap).login(username, passwd) as mailbox:
                 name=name.replace(' ','')
                 name=name.replace('\r','')
                 name=name.replace('\n','')
+                name=name.replace('\t','')
+                name=name.replace('\b','')
                 print(name)
                 year=msg.date.year
                 if not(os.path.exists(directory+"\\"+str(year))):
